@@ -1,0 +1,25 @@
+//fonts
+$primary-font: "SegoeUI";
+$secondary-font: "Roboto";
+
+//colors
+$default-black: #333;
+$light-black: #666;
+$dark-black: #000;
+$grey: #999;
+$light-grey: #f6f6f6;
+$blue: #09a7e9;
+$dark-blue: #0a6389;
+$cold-blue: #00245e;
+$green: #57b224;
+$white: #fff;
+
+//grid
+$container-max-widths: ( xl: 1200px) !default;
+
+//btn
+$input-btn-green-focus-box-shadow: 0 0 0 0.2rem rgba($green, 0.25);
+$input-btn-white-focus-box-shadow: 0 0 0 0.2rem rgba($white, 0.25);
+
+//forms
+$component-active-color: $green;
