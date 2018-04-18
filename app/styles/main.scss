@@ -111,32 +111,32 @@ body {
   }
 }
 
-.pagination{
-	.page-item{
-		.page-link{
-			padding: 0 .625rem;
-			border: none;
-			color: $light-black;
-			font-size: 1.125em;
-			font-weight: 600;
-			&:hover{
-				background-color: transparent;
-				border-bottom: 3px solid $blue;
-			}
-		}
-		&.active{
-			.page-link{
-				background-color: transparent;
-				border-bottom: 3px solid $blue;
-			}
-		}
-		&:before{
-			display: none;
-		}
-		&:not(:last-child){
-			margin-right: .875rem;
-		}
-	}
+.pagination {
+  .page-item {
+    .page-link {
+      padding: 0 .625rem;
+      border: none;
+      color: $light-black;
+      font-size: 1.125em;
+      font-weight: 600;
+      &:hover {
+        background-color: transparent;
+        border-bottom: 3px solid $blue;
+      }
+    }
+    &.active {
+      .page-link {
+        background-color: transparent;
+        border-bottom: 3px solid $blue;
+      }
+    }
+    &:before {
+      display: none;
+    }
+    &:not(:last-child) {
+      margin-right: .875rem;
+    }
+  }
 }
 
 //custom elements
@@ -278,7 +278,7 @@ ul {
       font-size: .75em;
       text-transform: uppercase;
       font-weight: 600;
-      margin-bottom: 1rem;
+      margin-bottom: .75rem;
       span,
       ul {
         text-transform: none;
@@ -293,8 +293,8 @@ ul {
           margin: 0 0 0 5px;
           li {
             margin-bottom: .5rem;
-            &:before{
-            	display: none;
+            &:before {
+              display: none;
             }
           }
         }
@@ -378,10 +378,18 @@ ul {
       visibility: hidden;
     }
   }
-  &.disabled{
-  	.overlay{
-  		background-color: rgba(188, 188, 188, .95);
-  	}
+  &.disabled {
+    .overlay {
+      background-color: rgba(188, 188, 188, .95);
+      .btn-empty {
+        &:hover {
+          color: $grey;
+        }
+        &:focus{
+        	box-shadow: $input-btn-white-focus-box-shadow;
+        }
+      }
+    }
   }
 }
 
@@ -439,8 +447,8 @@ ul {
     }
   }
   &:hover {
-  	color: inherit;
-  	text-decoration: none;
+    color: inherit;
+    text-decoration: none;
     span {
       background-color: $light-black;
       color: $white;
@@ -454,7 +462,6 @@ header {
 }
 
 .logo-text {
-  margin-right: 2.5em;
   h2 {
     margin-bottom: 0;
   }
@@ -472,6 +479,7 @@ header {
 }
 
 .lang-block {
+  margin-left: 2rem;
   .lang-nav {
     list-style: none;
     padding: 0;
@@ -1020,18 +1028,18 @@ footer {
   }
 }
 
-.vacancy-list{
-	margin-bottom: 1rem;
-	.section-header{
-		margin-bottom: 0;
-	}
-	.under-header{
-		color: #8f8f8f; //doesn't exist at bootstrap or color-scheme
-		margin-bottom: 0;
-		&:last-of-type{
-			margin-bottom: 2rem;
-		}
-	}
+.vacancy-list {
+  margin-bottom: 1rem;
+  .section-header {
+    margin-bottom: 0;
+  }
+  .under-header {
+    color: #8f8f8f; //doesn't exist at bootstrap or color-scheme
+    margin-bottom: 0;
+    &:last-of-type {
+      margin-bottom: 2rem;
+    }
+  }
 }
 
 //animation
