@@ -37,9 +37,25 @@ body {
   }
 }
 
+.modal-header {
+  .close {
+  	position: absolute;
+  	display: block;
+  	top: 0;
+  	right: 0;
+  	padding: 0;
+  	margin: 0;
+  	span{
+  		display: block;
+  		line-height: 1em;
+  	}
+  }
+}
+
 .modal-title {
   text-align: center;
-  font-size: 1.333em;
+  font-size: 1.5em;
+  width: 100%;
 }
 
 .form-control {
@@ -183,7 +199,7 @@ ul {
   color: $white;
   background-color: $green;
   border: 2px solid transparent;
-  padding: .85rem 1.667rem;
+  padding: .75rem 1.667rem;
   border-radius: 1.5rem;
   &:hover {
     border-color: $green;
@@ -200,9 +216,16 @@ ul {
   font-size: 2.25em;
   margin-bottom: 2.5rem;
   text-align: center;
+  position: relative;
   a {
     font-size: .875rem;
     color: $grey;
+  }
+  button {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
@@ -386,8 +409,8 @@ ul {
         &:hover {
           color: $grey;
         }
-        &:focus{
-        	box-shadow: $input-btn-white-focus-box-shadow;
+        &:focus {
+          box-shadow: $input-btn-white-focus-box-shadow;
         }
       }
     }
@@ -457,6 +480,85 @@ ul {
   }
 }
 
+.review-item {
+  background-color: $light-grey;
+  display: flex!important;
+  padding: 1.5rem 1.25rem;
+  border-radius: .625rem;
+  margin-bottom: 28px;
+  position: relative;
+  .review-item-img {
+    width: 175px;
+    height: 175px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 1.5rem;
+    img {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .review-item-info {
+    position: relative;
+    [class^="icon-"],
+    [class*=" icon-"] {
+      position: absolute;
+      top: 75px;
+      left: -35px;
+      text-decoration: none;
+      font-size: 1.125em;
+      color: $white;
+      width: 25px;
+      height: 25px;
+      background-color: $dark-blue;
+      border-radius: 50%;
+      transition: all .15s;
+      &:before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:hover {
+        background-color: $blue;
+      }
+    }
+    .review-item-name {
+      font-weight: 300;
+      font-size: 1.5em;
+      margin-bottom: 0;
+    }
+    .review-item-job-title {
+      font-size: .875em;
+      font-weight: 600;
+    }
+    .review-item-job-date {
+      font-size: .75em;
+      font-weight: 300;
+    }
+    .review-item-text {
+      margin-bottom: 0;
+      font-weight: 300;
+    }
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -28px;
+    left: 45px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 28px 28px 0 0;
+    border-color: $light-grey transparent transparent transparent;
+  }
+}
+
 header {
   padding-top: 1.5rem;
   margin-bottom: 1.250rem;
@@ -475,7 +577,7 @@ header {
 
 .phone-tabs {
   .nav {
-  	flex-wrap: nowrap;
+    flex-wrap: nowrap;
     margin-bottom: 0.375rem;
   }
 }
@@ -619,6 +721,7 @@ header {
       background-color: rgba(246, 251, 255, .9);
       .main-banner-form-heading {
         margin-bottom: 1.667rem;
+        font-size: 1.333em;
       }
       .custom-checkbox {
         margin-bottom: 1.333rem;
@@ -735,83 +838,7 @@ header {
   .review-slider {
     margin: 0 -15px;
     .review-slider-item {
-      background-color: $light-grey;
-      margin: 0 15px;
-      display: flex;
-      padding: 1.5rem 1.25rem;
-      border-radius: .625rem;
-      margin-bottom: 28px;
-      position: relative;
-      .review-item-img {
-        width: 175px;
-        height: 175px;
-        flex-shrink: 0;
-        border-radius: 50%;
-        overflow: hidden;
-        margin-right: 1.5rem;
-        img {
-          position: relative;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-      .review-item-info {
-        position: relative;
-        [class^="icon-"],
-        [class*=" icon-"] {
-          position: absolute;
-          top: 75px;
-          left: -35px;
-          text-decoration: none;
-          font-size: 1.125em;
-          color: $white;
-          width: 25px;
-          height: 25px;
-          background-color: $dark-blue;
-          border-radius: 50%;
-          transition: all .15s;
-          &:before {
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
-          &:hover {
-            background-color: $blue;
-          }
-        }
-        .review-item-name {
-          font-weight: 300;
-          font-size: 1.5em;
-          margin-bottom: 0;
-        }
-        .review-item-job-title {
-          font-size: .875em;
-          font-weight: 600;
-        }
-        .review-item-job-date {
-          font-size: .75em;
-          font-weight: 300;
-        }
-        .review-item-text {
-          margin-bottom: 0;
-          font-weight: 300;
-        }
-      }
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        bottom: -28px;
-        left: 45px;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 28px 28px 0 0;
-        border-color: $light-grey transparent transparent transparent;
-      }
+      margin: 0 15px 28px;
     }
   }
 }
@@ -1044,20 +1071,27 @@ footer {
   }
 }
 
-.vacancy-item-row{
-	margin-bottom: 1.5rem;
-	padding-bottom: 3.75rem;
-	border-bottom: 1px solid $light-grey;
-	.vacancy-item-page-slider{
-		margin-bottom: 2rem;
-	}
-	.vacancy-item-page-text{
-		ul{
-			padding: 0;
-		}
-	}
+.vacancy-item-row {
+  margin-bottom: 1.5rem;
+  padding-bottom: 3.75rem;
+  border-bottom: 1px solid $light-grey;
+  .vacancy-item-page-slider {
+    margin-bottom: 2rem;
+  }
+  .vacancy-item-page-text {
+    ul {
+      padding: 0;
+    }
+  }
 }
 
+.review-page {
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid $light-grey;
+  .review-item {
+    margin-bottom: calc(1.875rem + 28px);
+  }
+}
 
 //animation
 @-webkit-keyframes blink {
