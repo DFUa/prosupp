@@ -29,17 +29,40 @@ $(document).ready(function() {
 
   // slider setting
   $('.review-slider').slick({
-  	autoplay: true,
-  	slidesToShow: 2,
-  	rows: 0,
-  	nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
-  	prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
+    autoplay: true,
+    slidesToShow: 2,
+    rows: 0,
+    nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
+    prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
   });
+
   $('.last-news-slider').slick({
-  	autoplay: true,
-  	slidesToShow: 3,
-  	rows: 0,
-  	nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
-  	prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
+    autoplay: true,
+    slidesToShow: 3,
+    rows: 0,
+    nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
+    prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
+  });
+
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      let reader = new FileReader();
+      reader.onload = function(e) {
+        $('#photo-preview').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+    $('#photo-placeholder').hide();
+  }
+  $("#user-photo").on('change', function() {
+    readURL(this);
+  });
+
+  $('.contact-item-add-info-btn .btn-fill').on('click',function (e) {
+  	e.preventDefault();
+  	//$(this).tab('show')
+  	console.log($(this).attr('href'))
+  	$($(this).attr('href')).tab('show');
+  	/*$(this).tab('show')*/
   })
 })

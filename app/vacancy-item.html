@@ -79,11 +79,6 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -270,11 +265,16 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  ...
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <form action="#">
+                    <input type="type" class="form-control" id="name" placeholder="Ім'я" required>
+                    <input type="tel" class="form-control" id="phone" placeholder="Номер телефону" required>
+                    <textarea class="form-control" name="message" placeholder="Ваше повідомлення" id="modalJobMessage" required></textarea>
+                    <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" id="policePrivacy" required>
+                      <label class="custom-control-label" for="policePrivacy">Згоден(на) з політикою конфінденційності</label>
+                    </div>
+                    <button type="submit" class="btn btn-fill main-banner-form-submit">Залишити заявку</button>
+                  </form>
                 </div>
               </div>
             </div>

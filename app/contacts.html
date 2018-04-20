@@ -79,11 +79,6 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      ...
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
                     </div>
                   </div>
                 </div>
@@ -129,140 +124,67 @@
       <nav class="d-flex align-items-center justify-content-between" aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="#">Головна</a></li>
-          <li class="breadcrumb-item active" aria-current="page">Відгуки</li>
+          <li class="breadcrumb-item active" aria-current="page">Контакти</li>
         </ol>
         <a class="back-link" href="#"><span class="icon-arrow"></span> Повернутись назад</a>
       </nav>
     </div>
   </section>
-  <section class="review-page">
+  <section class="contacts-page">
     <div class="container">
-      <p class="section-header">Відгуки
-        <button type="button" class="btn btn-fill" data-toggle="modal" data-target="#reviewModal">
-          Залишити відгук
-        </button>
-      </p>
-      <div class="modal fade" id="reviewModal" tabindex="-1" role="dialog" aria-labelledby="reviewModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="reviewModalLabel">Залишити відгук</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <form action="#">
-                <div class="input-group user-photo">
-                  <div class="photo-preview">
-                    <span class="icon-photo-camera photo-placeholder" id="photo-placeholder"></span>
-                    <img id="photo-preview" src="#" alt="">
-                  </div>
-                  <label for="user-photo">Завантажити фото</label>
-                  <input id="user-photo" type="file" required>
-                </div>
-                <input type="text" class="form-control" id="nameReview" placeholder="Ім'я" required>
-                <input type="text" class="form-control" id="profReview" placeholder="Професія" required>
-                <input type="url" class="form-control" id="urlReviewFacebook" placeholder="Посилання на сторінку facebook" required>
-                <textarea class="form-control" name="messageReview" placeholder="Ваше повідомлення" id="modalReviewMessage" required></textarea>
-                <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" id="policePrivacy" required>
-                  <label class="custom-control-label" for="policePrivacy">Згоден(на) з політикою конфінденційності</label>
-                </div>
-                <button type="submit" class="btn btn-fill main-banner-form-submit">Залишити заявку</button>
-              </form>
+      <p class="section-header">Контакти</p>
+      <p class="under-header">Представництво</p>
+      <div class="contact-item">
+        <div class="row">
+          <div class="col">
+            <div class="contact-item-city">Вінниця (Україна)</div>
+            <div class="contact-item-add-info d-flex">
+              <div class="contact-item-add-info-text">
+                <p class="contact-item-add-info-address icon-map">м. Вінниця, вул. Зодчих 5/ Бульвар Свободи 4</p>
+                <ul class="icon-phone contact-item-add-info-tel">
+                  <li>+38 (098) 318-40-97</li>
+                  <li>+38 (098) 318-40-98</li>
+                  <li>+38 (098) 318-40-99</li>
+                </ul>
+              </div>
+              <div class="contact-item-add-info-btn">
+                <a href="#pills-home" class="btn btn-fill">Як до нас добратись</a>
+                <a href="#" class="btn btn-empty">Зворотній зв`язок</a>
+              </div>
             </div>
           </div>
+          <div class="col">2</div>
         </div>
       </div>
-      <div class="modal success-modal fade" id="reviewSuccess" tabindex="-1" role="dialog" aria-labelledby="reviewSuccessLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <span class="success-icon"></span>
-              <h5 class="modal-title" id="reviewSuccessLabel">Дякуємо за відгук!</h5>
-              <p class="modal-undertitle">Ваш відгук з’явиться після підтвердження даних адміністратором</p>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+      <div class="contact-item">
+        <div class="row">
+          <div class="col">
+            <div class="contact-item-city">Вінниця (Україна)</div>
+            <div class="contact-item-add-info d-flex">
+              <div class="contact-item-add-info-text">
+                <p class="contact-item-add-info-address icon-map">м. Вінниця, вул. Зодчих 5/ Бульвар Свободи 4</p>
+                <ul class="icon-phone contact-item-add-info-tel">
+                  <li>+38 (098) 318-40-97</li>
+                  <li>+38 (098) 318-40-98</li>
+                  <li>+38 (098) 318-40-99</li>
+                </ul>
+              </div>
+              <div class="contact-item-add-info-btn">
+                <a href="#pills-profile" class="btn btn-fill">Як до нас добратись</a>
+                <a href="#" class="btn btn-empty">Зворотній зв`язок</a>
+              </div>
             </div>
           </div>
+          <div class="col">4</div>
         </div>
       </div>
-      <div class="review-item">
-        <div class="review-item-img">
-          <img src="images/user0.jpg" alt="#">
-        </div>
-        <div class="review-item-info">
-          <a class="icon-facebook-logo" href="#"></a>
-          <p class="review-item-name">Матвій</p>
-          <p class="review-item-job d-flex justify-content-between">
-            <span class="review-item-job-title">Працівник складу</span>
-            <span class="review-item-job-date">04.03.2018</span>
-          </p>
-          <p class="review-item-text">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          </p>
+      <div class="contact-get-to">
+        <div class="tab-content" id="pills-tabContent">
+          <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">some text</div>
+          <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">some text 2</div>
+          <div class="tab-pane fade" id="pills-text" role="tabpanel" aria-labelledby="pills-text-tab">some text 3</div>
         </div>
       </div>
-      <div class="review-item">
-        <div class="review-item-img">
-          <img src="images/user1.jpg" alt="#">
-        </div>
-        <div class="review-item-info">
-          <a class="icon-facebook-logo" href="#"></a>
-          <p class="review-item-name">Олена</p>
-          <p class="review-item-job d-flex justify-content-between">
-            <span class="review-item-job-title">Працівник супермаркету</span>
-            <span class="review-item-job-date">06.03.2018</span>
-          </p>
-          <p class="review-item-text">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          </p>
-        </div>
-      </div>
-      <div class="review-item">
-        <div class="review-item-img">
-          <img src="images/user0.jpg" alt="#">
-        </div>
-        <div class="review-item-info">
-          <a class="icon-facebook-logo" href="#"></a>
-          <p class="review-item-name">Матвій</p>
-          <p class="review-item-job d-flex justify-content-between">
-            <span class="review-item-job-title">Працівник складу</span>
-            <span class="review-item-job-date">04.03.2018</span>
-          </p>
-          <p class="review-item-text">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          </p>
-        </div>
-      </div>
-      <div class="review-item">
-        <div class="review-item-img">
-          <img src="images/user1.jpg" alt="#">
-        </div>
-        <div class="review-item-info">
-          <a class="icon-facebook-logo" href="#"></a>
-          <p class="review-item-name">Олена</p>
-          <p class="review-item-job d-flex justify-content-between">
-            <span class="review-item-job-title">Працівник супермаркету</span>
-            <span class="review-item-job-date">06.03.2018</span>
-          </p>
-          <p class="review-item-text">
-            There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
-          </p>
-        </div>
-      </div>
-      <nav aria-label="page navigation vacancy-list">
-        <ul class="pagination justify-content-center">
-          <li class="page-item disabled">
-            <a class="page-link" href="#" tabindex="-1">1</a>
-          </li>
-          <li class="page-item active"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-        </ul>
-      </nav>
     </div>
   </section>
   <section class="questions">
