@@ -195,7 +195,7 @@ body {
 }
 
 //custom elements
-ul {
+ul:not(.nav) {
   list-style: none;
   li {
     &:before {
@@ -1211,17 +1211,104 @@ footer {
   }
 }
 
-.contacts-page{
-	.section-header{
-		margin-bottom: 0;
-	}
+.contacts-page {
+  margin-bottom: .625rem;
+  .section-header {
+    margin-bottom: 0;
+  }
 }
 
-.contact-item{
-	border: 1px solid $light-grey;
-	border-radius: 10px;
-	padding: ($grid-gutter-width / 2) $grid-gutter-width;
-	margin-bottom: 1.875rem;
+.contact-item {
+  border: 1px solid $light-grey;
+  border-radius: 10px;
+  padding: ($grid-gutter-width / 2) $grid-gutter-width;
+  margin-bottom: 1.875rem;
+  .contact-item-city {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: .875rem;
+    margin-bottom: 1.75rem;
+  }
+  .contact-item-add-info-text {
+    margin-right: .625rem;
+    .contact-item-add-info-address,
+    .contact-item-add-info-tel {
+      position: relative;
+      padding-left: 2.875rem;
+      font-size: .875em;
+      &:before {
+        display: block;
+        position: absolute;
+        left: 0;
+        color: $blue;
+        font-size: 1.5em;
+      }
+    }
+    .contact-item-add-info-tel {
+      li:before {
+        display: none;
+      }
+    }
+  }
+  .contact-item-add-info-btn {
+    .btn {
+      margin-bottom: 1.25rem;
+      width: 100%;
+    }
+  }
+  .contact-item-map {
+    iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.contact-get-to {
+  .contact-get-to-header {
+    text-align: center;
+    font-family: $secondary-font;
+    font-size: 1.5em;
+  }
+}
+
+.contact-get-to-nav {
+  margin-bottom: 1.25rem;
+  .nav-link {
+    padding: 0 1.25rem .5rem;
+    text-decoration: none;
+    font-size: inherit;
+    font-weight: 300;
+    border-bottom: 4px solid transparent;
+    color: $grey;
+    &.active {
+      color: $green;
+      border-color: $green;
+      font-weight: 600;
+    }
+  }
+}
+
+.contact-get-to-content {
+  .contact-get-to-content-way {
+    border-bottom: 1px solid $light-grey;
+    padding-bottom: 2rem;
+    margin-bottom: 1.25rem;
+    .contact-get-to-content-header {
+      font-size: 1.25em;
+    }
+    .get-to-content-img {
+    	margin-bottom: 1.25rem;
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+    .get-to-content-text {
+      font-weight: 300;
+      font-size: .875em;
+    }
+  }
 }
 
 //animation

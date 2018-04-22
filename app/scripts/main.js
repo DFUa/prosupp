@@ -58,11 +58,14 @@ $(document).ready(function() {
     readURL(this);
   });
 
-  $('.contact-item-add-info-btn .btn-fill').on('click',function (e) {
-  	e.preventDefault();
-  	//$(this).tab('show')
-  	console.log($(this).attr('href'))
-  	$($(this).attr('href')).tab('show');
-  	/*$(this).tab('show')*/
+  $('.contact-item-add-info-btn .nav-link').on('click', function(e) {
+    e.preventDefault();
+    /* tabs-content id provides by aria-control in the html file */
+    let aria = $(this).attr('aria-control-by'),
+      sectionPosition = $('.contact-get-to').offset().top;
+    $('#' + aria + ' a[href="' + $(this).attr('href') + '"]').tab('show');
+    $('html, body').animate({
+      scrollTop: sectionPosition - 50
+    }, 1000);
   })
 })
