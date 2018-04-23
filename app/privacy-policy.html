@@ -1,0 +1,353 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>prosupport</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="/bower_components/slick-carousel/slick/slick.css" />
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <!-- build:js scripts/vendor/modernizr.js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <header>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+        <div class="logo-text">
+          <h2>Агенція  працевлаштування</h2>
+          <span>Графік роботи: Пн-Пт 09:00-18:00</span>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarHeader">
+          <div class="d-flex justify-content-between w-100">
+            <div class="phone-tabs">
+              <nav>
+                <div class="nav nav-pills" id="phone-tab" role="tablist">
+                  <a class="nav-item nav-link" id="phone-tab-region" data-toggle="tab" href="#phone-region" role="tab" aria-controls="phone-region" aria-selected="true">Вінниця</a>
+                  <a class="nav-item nav-link" id="phone-tab-mts" data-toggle="tab" href="#phone-mts" role="tab" aria-controls="phone-mts" aria-selected="false">МТС</a>
+                  <a class="nav-item nav-link" id="phone-tab-lifecell" data-toggle="tab" href="#phone-lifecell" role="tab" aria-controls="phone-lifecell" aria-selected="false">Lifecell</a>
+                  <a class="nav-item nav-link active" id="phone-tab-kyivstar" data-toggle="tab" href="#phone-kyivstar" role="tab" aria-controls="phone-kyivstar" aria-selected="false">Київстар</a>
+                </div>
+              </nav>
+              <div class="tab-content" id="phone-tab-content">
+                <div class="tab-pane fade" id="phone-region" role="tabpanel" aria-labelledby="phone-tab-region">
+                  <span class="h4">+38 (098) 318-40-97</span>
+                </div>
+                <div class="tab-pane fade" id="phone-mts" role="tabpanel" aria-labelledby="phone-tab-mts">
+                  <span class="h4">+38 (098) 318-40-98</span>
+                </div>
+                <div class="tab-pane fade" id="phone-lifecell" role="tabpanel" aria-labelledby="phone-tab-lifecell">
+                  <span class="h4">+38 (098) 318-40-99</span>
+                </div>
+                <div class="tab-pane fade show active" id="phone-kyivstar" role="tabpanel" aria-labelledby="phone-tab-kyivstar">
+                  <span class="h4">+38 (098) 318-40-90</span>
+                </div>
+              </div>
+            </div>
+            <div class="lang-block">
+              <ul class="lang-nav d-flex justify-content-center w-100">
+                <li class="active"><a href="#">Uk</a></li>
+                <li><a href="#">Ru</a></li>
+              </ul>
+              <button type="button" class="btn btn-empty" data-toggle="modal" data-target="#callbackModal">
+                Замовити дзвінок
+              </button>
+              <div class="modal fade" id="callbackModal" tabindex="-1" role="dialog" aria-labelledby="callbackModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="callbackModalLabel">Замовити дзвінок</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <form action="#">
+                        <input type="text" class="form-control" id="name" placeholder="Ім'я" required>
+                        <input type="tel" class="form-control" id="phone" placeholder="Номер телефону" required>
+                        <div class="custom-control custom-checkbox">
+                          <input type="checkbox" class="custom-control-input" id="policePrivacy" required>
+                          <label class="custom-control-label" for="policePrivacy">Згоден(на) з політикою конфінденційності</label>
+                        </div>
+                        <button type="submit" class="btn btn-fill main-banner-form-submit">Залишити заявку</button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal success-modal fade" id="callbackSuccess" tabindex="-1" role="dialog" aria-labelledby="callbackSuccessLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <span class="success-icon"></span>
+                      <h5 class="modal-title" id="callbackSuccessLabel">Заявку прийнято!</h5>
+                      <p class="modal-undertitle">Очікуйте дзвінка від менеджера</p>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+  <section class="main-menu">
+    <div class="container">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Головна</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Вакансії</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Про нас</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Як ми працюємо</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Відгуки</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Новини</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Контакти</a>
+        </li>
+      </ul>
+    </div>
+  </section>
+  <section class="breadcrumb-section">
+    <div class="container">
+      <nav class="d-flex align-items-center justify-content-between" aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Головна</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Політика конфіденційності</li>
+        </ol>
+        <a class="back-link" href="#"><span class="icon-arrow"></span> Повернутись назад</a>
+      </nav>
+    </div>
+  </section>
+  <section class="privacy-policy-page">
+    <div class="container">
+      <p class="section-header">Політика конфіденційності</p>
+      <p>Ця Політика конфіденційності персональних даних (далі - Політика конфіденційності) діє відносно всієї інформації, яку сайт Агенція працевлаштування в Польщі, розташований на доменному імені http://prosuport.com.ua/, може отримати про Користувача під час використання програм і продуктів сайту.</p>
+      <ol>
+        <li>Визначення термінів
+          <ol>
+            <li>У цій Політиці конфіденційності використовуються такі терміни:
+              <ol>
+                <li>«Адміністрація сайту (далі - Адміністрація сайту)» - уповноважені співробітники на управління сайтом, що діють від імені Агенція працевлаштування в Польщі, які організовують і (або) здійснюють обробку персональних даних, а також визначають цілі обробки персональних даних, склад персональних даних, що підлягають обробці, дії (операції), що здійснюються з персональними даними.</li>
+                <li>«Персональні дані» - відомості чи сукупність відомостей про фізичну особу, яка ідентифікована або може бути конкретно ідентифікована (суб'єкт персональних даних).</li>
+                <li>«Обробка персональних даних» - будь-яка дія або сукупність дій, таких як збирання, реєстрація, накопичення, зберігання, адаптування, зміна, поновлення, використання і поширення (розповсюдження, передача), знеособлення, знищення персональних даних, у тому числі з використанням інформаційних (автоматизованих) систем.</li>
+                <li>«Конфіденційність персональних даних» - обов'язкове для дотримання Оператором або іншою особою, що отримала доступ до персональних даних, вимога не допускати їх поширення без згоди суб'єкта персональних даних або наявності іншої законної підстави.</li>
+                <li>«Користувач сайту (далі - Користувач)» - особа, яка має доступ до Сайту, за допомогою мережі Інтернет і використовує Сайт.</li>
+                <li>«Cookies» - невеликий фрагмент даних, відправлений веб-сервером, що зберігається на комп'ютері користувача, який веб-клієнт або веб-браузер кожен раз пересилає веб-серверу в HTTP-запиті при спробі відкрити сторінку відповідного сайту.</li>
+                <li>«IP-адреса» - унікальна мережева адреса вузла в комп'ютерній мережі, побудованої за протоколом IP.</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>Загальні положення
+          <ol>
+            <li>Використання Користувачем сайту означає згоду з цією Політикою конфіденційності та умовами обробки персональних даних Користувача.</li>
+            <li>У разі незгоди з умовами Політики конфіденційності, Користувач повинен припинити використання сайту.</li>
+            <li>Дана Політика конфіденційності застосовується лише до сайту Агенція працевлаштування в Польщі. Агенція працевлаштування в Польщі, не контролює і не несе відповідальності за сайти третіх осіб, на які Користувач може перейти по посиланням, що доступні на сайті.</li>
+            <li>Адміністрація сайту не перевіряє достовірність персональних даних, що надаються Користувачем сайту. </li>
+          </ol>
+        </li>
+        <li>Предмет політики конфіденційності
+          <ol>
+            <li>Ця Політика конфіденційності встановлює зобов'язання Адміністрації сайту щодо нерозголошення та забезпечення режиму захисту конфіденційності персональних даних, які Користувач повинен за вимогою надати Адміністрації сайту при заповненні форм для зворотнього зв'язку.</li>
+            <li>Персональні дані, дозволені для обробки в рамках цієї Політики конфіденційності, надаються Користувачем шляхом заповнення форми на Сайті Концерну «ПОДІЛЛЯ», і включають в себе наступну інформацію:
+              <ol>
+                <li>Ім'я користувача;</li>
+                <li>Контактний телефон Користувача;</li>
+                <li>Адреса електронної пошти (e-mail).</li>
+              </ol>
+            </li>
+            <li>Концерн «ПОДІЛЛЯ» захищає Дані, які автоматично передаються в процесі відвідуванні сторінок, на яких встановлено статистичний скрипт системи ("піксель"):
+              <br> - IP адреса;
+              <br> - Інформація з cookies;
+              <br> - Інформація про браузер (чи іншої програми, яка здійснює доступ до показу реклами);
+              <br> - Час доступу;
+              <br> - Адреса сторінки, на якій розташований рекламний блок;
+              <br> - Реферер (адреса попередньої сторінки).
+              <ol>
+                <li>Відключення cookies може спричинити неможливість доступу до де-яких розділів сайту.</li>
+                <li>Концерн «ПОДІЛЛЯ» здійснює збір статистики про IP-адреси своїх відвідувачів. Дана інформація використовується з метою виявлення і вирішення технічних проблем.</li>
+              </ol>
+            </li>
+            <li>Будь-яка інша персональна інформація не обговорена вище (браузери і операційні системи, що використовуються і т.д.) підлягає надійному зберіганню і нерозповсюдженню, за винятком випадків, передбачених в п.п. 5.2. і 5.3. цієї Політики конфіденційності.</li>
+          </ol>
+        </li>
+        <li>Цілі збору персональної інформації користувача
+          <ol>
+            <li>Персональні дані Користувача Адміністрація сайту може використовувати в цілях:
+              <ol>
+                <li>Ідентифікації Користувача, для оформлення та (або) укладення дистанційним способом Договорів з Концерну «ПОДІЛЛЯ».</li>
+                <li>Надання Користувачеві доступу до персоналізованих ресурсів Сайту.</li>
+                <li>Встановлення з Користувачем зворотнього зв'язку, включаючи направлення повідомлень, запитів, що стосуються використання Сайту, надання послуг, обробка запитів і заявок від Користувача.</li>
+                <li>Визначення місця знаходження Користувача для забезпечення безпеки, запобігання шахрайства.</li>
+                <li>Підтвердження достовірності та повноти персональних даних, наданих Користувачем.</li>
+                <li>Надання Користувачеві ефективної клієнтської і технічної підтримки при виникненні проблем, пов'язаних з використанням Сайту.</li>
+                <li>Надання Користувачеві з його згоди, оновлень продукції, спеціальних пропозицій, інформації про ціни, розсилки новин та інших відомостей від імені Концерну «ПОДІЛЛЯ».</li>
+                <li>Здійснення рекламної діяльності за згодою Користувача.</li>
+                <li>Надання доступу Користувачеві на сайти або сервіси партнерів з метою отримання продуктів, оновлень і послуг.</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>Способи і терміни обробки персональної інформації
+          <ol>
+            <li>Обробка персональних даних Користувача здійснюється без обмеження терміну, будь-яким законним способом, в тому числі в інформаційних системах персональних даних з використанням засобів автоматизації або без використання таких засобів.</li>
+            <li>Користувач погоджується з тим, що Адміністрація сайту має право передавати персональні дані третім особам, зокрема, організаціям поштового зв'язку, операторам електрозв'язку, виключно з метою виконання заявки Користувача, оформленої на Сайті Концерну «ПОДІЛЛЯ».</li>
+            <li>Персональні дані Користувача можуть бути передані уповноваженим органам державної влади України, тільки на підставах та в порядку, встановленим законодавством України.</li>
+            <li>При втраті або розголошенні персональних даних, Адміністрація сайту інформує Користувача про втрату або розголошення персональних даних.</li>
+            <li>Адміністрація сайту вживає необхідних організаційних і технічних заходів для захисту персональної інформації Користувача від неправомірного або випадкового доступу, знищення, перекручення, блокування, копіювання, поширення, а також від інших неправомірних дій третіх осіб.</li>
+            <li>Адміністрація сайту спільно з Користувачем вживає всіх необхідних заходів щодо запобігання збиткам або іншим негативним наслідкам, викликаними втратою або розголошенням персональних даних Користувача.</li>
+          </ol>
+        </li>
+        <li>Зобов’язання сторін
+          <ol>
+            <li>Користувач зобов'язаний:
+              <ol>
+                <li>Надати інформацію про персональні дані, необхідну для користування Сайтом.</li>
+              </ol>
+            </li>
+            <li>Адміністрація сайту зобов'язана:
+              <ol>
+                <li>Використовувати отриману інформацію виключно для цілей, зазначених у п. 4 цієї Політики конфіденційності.</li>
+                <li>Забезпечити зберігання конфіденційної інформації в таємниці, не розголошувати без попередньої письмової згоди Користувача, а також не здійснювати продаж, обмін, опублікування, або розголошення іншими можливими способами переданих персональних даних Користувача, за винятком п.п. 5.2. і 5.3. цієї Політики Конфіденційності.</li>
+                <li>Вживати заходів безпеки для захисту конфіденційності персональних даних Користувача згідно з порядком, який зазвичай використовується для захисту такого роду інформації в існуючому діловому обороті.</li>
+                <li>Здійснити блокування персональних даних, що відносяться до відповідного Користувача, з моменту звернення або запиту Користувача, або його законного представника або уповноваженого органу з захисту прав суб'єктів персональних даних на період перевірки, в разі виявлення неправомірних дій.</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>Відповідальність сторін
+          <ol>
+            <li>Адміністрація сайту, яка не виконала свої зобов'язання, несе відповідальність за збитки, понесені Користувачем у зв'язку з неправомірним використанням персональних даних, відповідно до законодавства України, за винятком випадків, передбачених п.п. 5.2., 5.3. і 7.2. цієї Політики Конфіденційності.</li>
+            <li>У разі втрати або розголошення Конфіденційної інформації Адміністрація сайту не несе відповідальність, якщо дана конфіденційна інформація:
+              <ol>
+                <li>Стала публічним надбанням до її втрати або розголошення.</li>
+                <li>Була отримана від третьої сторони до моменту її отримання Адміністрацією сайту.</li>
+                <li>Була розголошена за згодою Користувача.</li>
+              </ol>
+            </li>
+          </ol>
+        </li>
+        <li>Додаткові умови
+          <ol>
+            <li>Всі пропозиції або питання до даної Політики конфіденційності слід повідомляти нам за адресою https://koncern-podillya.com.ua/contacts</li>
+            <li>Діюча Політика конфіденційності розміщена на сторінці за адресою https://koncern-podillya.com.ua/privacy-policy.</li>
+          </ol>
+        </li>
+      </ol>
+      <p>Оновлено 19.03 2018р.</p>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <a href="#" class="footer-logo">
+            <img src="images/footer-logo.png" alt="#">
+          </a>
+          <a href="#" class="copyrights">Ліцензія: Certyfikat od 2016-04-22 №13-921</a>
+        </div>
+        <div class="col">
+          <ul class="footer-nav">
+            <li><a href="#">Вакансії</a></li>
+            <li><a href="#">Відгуки</a></li>
+            <li><a href="#">Контакти</a></li>
+            <li><a href="#">Карта сайту</a></li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="schedule">
+            <p>Графік роботи: Пн-Пт 09:00-18:00</p>
+            <p class="address">21037, Україна, м. Вінниця, вул. Зодчих, 5 69-100, Polska, Słubice, ul. Piłsudskiego 8c/3</p>
+            <p class="address">Ми в соц.мережі:<a class="icon-facebook-logo" href="#"></a></p>
+          </div>
+        </div>
+        <div class="col text-right">
+          <div class="footer-phone-tabs">
+            <nav>
+              <div class="nav nav-pills justify-content-end" id="footer-phone-tab" role="tablist">
+                <a class="nav-item nav-link" id="footer-phone-tab-mts" data-toggle="tab" href="#footer-phone-mts" role="tab" aria-controls="footer-phone-mts" aria-selected="false">МТС</a>
+                <a class="nav-item nav-link" id="footer-phone-tab-lifecell" data-toggle="tab" href="#footer-phone-lifecell" role="tab" aria-controls="footer-phone-lifecell" aria-selected="false">Lifecell</a>
+                <a class="nav-item nav-link active" id="footer-phone-tab-kyivstar" data-toggle="tab" href="#footer-phone-kyivstar" role="tab" aria-controls="footer-phone-kyivstar" aria-selected="false">Київстар</a>
+              </div>
+            </nav>
+            <div class="footer-tab-content tab-content" id="footer-phone-tab-content">
+              <div class="tab-pane fade" id="footer-phone-mts" role="tabpanel" aria-labelledby="footer-phone-tab-mts">
+                <span class="h4"><i>+38 (098)</i> 318-40-98</span>
+              </div>
+              <div class="tab-pane fade" id="footer-phone-lifecell" role="tabpanel" aria-labelledby="footer-phone-tab-lifecell">
+                <span class="h4"><i>+38 (098)</i> 318-40-99</span>
+              </div>
+              <div class="tab-pane fade show active" id="footer-phone-kyivstar" role="tabpanel" aria-labelledby="footer-phone-tab-kyivstar">
+                <span class="h4"><i>+38 (098)</i> 318-40-90</span>
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-empty btn-footer-callback" data-toggle="modal" data-target="#callbackModal">
+            Замовити дзвінок
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/modernizr/modernizr.js"></script>
+  <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/slick-carousel/slick/slick.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/scrollspy.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

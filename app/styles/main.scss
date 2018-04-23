@@ -1335,19 +1335,52 @@ footer {
       margin-bottom: 30px;
     }
   }
-  .news-item-text{
-  	img{
-  		margin: 0 15px;
-  		&.float-right{
-  			margin-right: 0;
-  		}
-  		&.float-left{
-  			margin-left: 0;
-  		}
-  	}
-  	p{
-  		font-weight: 300;
-  	}
+  .news-item-text {
+    img {
+      margin: 0 15px;
+      &.float-right {
+        margin-right: 0;
+      }
+      &.float-left {
+        margin-left: 0;
+      }
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+}
+
+.privacy-policy-page {
+  ol {
+    counter-reset: item;
+    padding: 0;
+    li {
+      display: block;
+      &:before {
+        content: counters(item, ".") " ";
+        counter-increment: item;
+      }
+    }
+    &>li {
+      font-size: 1.25em;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      &>ol {
+        margin-top: 1rem;
+        li {
+          margin-bottom: 0;
+          font-size: initial;
+          font-weight: 300;
+          ol {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+  }
+  p{
+  	font-weight: 300;
   }
 }
 
