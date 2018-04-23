@@ -12,6 +12,12 @@ $dark-blue: #006d9a;
 $white: #fff;
 $cold-blue: #00245e;
 $blue: #09a7e9;
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1200px
+) !default;
 
 //custom-input
 $custom-control-indicator-checked-color: $green;
@@ -19,3 +25,34 @@ $custom-control-indicator-checked-color: $green;
 //shadow
 $input-btn-green-focus-box-shadow: 0 0 0 0.2rem rgba($green, .25);
 $input-btn-white-focus-box-shadow: 0 0 0 0.2rem rgba($white, .25);
+
+//functions
+$colors-list: ( orange #e98009 1,
+dark-green #b6ae19 2,
+light-blue #0895cf 3,
+dark-blue #394783 4,
+pink #df3955 5,
+light-green #77b236 6);
+
+.how-work-item {
+  @each $i in $colors-list {
+    &.header-color-#{nth($i, 1)} {
+      .how-work-item-header {
+        border-color: #{nth($i, 2)};
+        color: #{nth($i, 2)};
+        &:after {
+          border-color: transparent #{nth($i, 2)} transparent transparent;
+        }
+      }
+      &.how-work-right-item {
+        .how-work-item-header:after {
+          border-color: #{nth($i, 2)} transparent transparent transparent;
+        }
+      }
+    }
+    &.how-work-item-#{nth($i, 3)}:before {
+      content: '#{nth($i, 3)}';
+      background-color: #{nth($i, 2)};
+    }
+  }
+}
