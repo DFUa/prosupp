@@ -43,6 +43,12 @@ $(document).ready(function() {
     nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
     prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
   });
+  $('.about-us-slider').slick({
+  	autoplay: true,
+  	rows: 0,
+  	nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
+    prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
+  })
 
   function readURL(input) {
     if (input.files && input.files[0]) {

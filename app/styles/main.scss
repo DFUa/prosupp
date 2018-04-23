@@ -217,8 +217,8 @@ ul:not(.nav) {
   color: $green;
   border: 2px solid $green;
   background-color: transparent;
-  padding: 0.75em 2em;
-  border-radius: 1.5em;
+  padding: 0.75rem 2rem;
+  border-radius: 1.5rem;
   &:hover {
     border-color: transparent;
     background-color: $green;
@@ -1379,8 +1379,75 @@ footer {
       }
     }
   }
-  p{
-  	font-weight: 300;
+  p {
+    font-weight: 300;
+  }
+}
+
+.about-us-page {
+  margin-bottom: 50px;
+  .about-us-text {
+    font-weight: 300;
+    .font-semibold {
+      font-weight: 600;
+    }
+  }
+  .about-us-slider {
+    .about-us-slider-item {
+      img {
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.work-with {
+	padding-bottom: 90px;
+	border-bottom: 1px solid $light-grey;
+	margin-bottom: 40px;
+  .work-with-item {
+  	display: flex;
+    .work-with-img {
+      position: relative;
+      background-color: #f8f8f8;
+      width: 250px;
+      height: 300px;
+      margin-right: 30px;
+      img {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 90%;
+        max-height: 90%;
+      }
+    }
+    .work-with-text{
+    	.work-with-name{
+    		font-weight: 300;
+    		font-size: 1.5em;
+    	}
+    	.work-with-position{
+    		font-weight: 600;
+    		color: $grey;
+    		font-size: .875em;
+    	}
+    	.work-with-connect{
+    		.btn{
+    			margin-bottom: 1rem;
+    			&.btn-empty{
+    				color: $blue;
+    				border-color: $blue;
+    				&:hover{
+    					background-color: $blue;
+    					color: $white;
+    				}
+    			}
+    		}
+    	}
+    }
   }
 }
 
