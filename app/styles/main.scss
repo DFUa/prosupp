@@ -1314,10 +1314,41 @@ footer {
   }
 }
 
-.news-page-list{
-	.news-item{
-		margin-bottom: 30px;
-	}
+.news-page-list {
+  .news-item {
+    margin-bottom: 30px;
+  }
+}
+
+.news-item-page {
+  .news-item-header {
+    font-size: 1.875em;
+  }
+  .news-item-container {
+    .date {
+      font-size: .75em;
+      color: #999;
+    }
+  }
+  .other-news {
+    .news-item {
+      margin-bottom: 30px;
+    }
+  }
+  .news-item-text{
+  	img{
+  		margin: 0 15px;
+  		&.float-right{
+  			margin-right: 0;
+  		}
+  		&.float-left{
+  			margin-left: 0;
+  		}
+  	}
+  	p{
+  		font-weight: 300;
+  	}
+  }
 }
 
 //animation
