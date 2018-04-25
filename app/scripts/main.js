@@ -23,7 +23,7 @@ $(document).ready(function() {
     }, 1000);
   };
   setTimer(1546812001000, '#timer0');
-  setTimer(1524236400000, '#timer1');
+  setTimer(1534236400000, '#timer1');
   setTimer(1523869200000, '#timer2');
   setTimer(1546812001000, '#timer3');
 
