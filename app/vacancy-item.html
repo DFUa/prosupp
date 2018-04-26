@@ -28,7 +28,7 @@
   <header>
     <div class="container">
       <nav class="navbar navbar-expand-lg navbar-light">
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="logo">
           </a>
         <div class="logo-text">
@@ -96,25 +96,25 @@
     <div class="container">
       <ul class="nav">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Головна</a>
+          <a class="nav-link" href="index.html">Головна</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Вакансії</a>
+          <a class="nav-link active" href="#">Вакансії</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Про нас</a>
+          <a class="nav-link" href="about-us.html">Про нас</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Як ми працюємо</a>
+          <a class="nav-link" href="how-work.html">Як ми працюємо</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Відгуки</a>
+          <a class="nav-link" href="review-page.html">Відгуки</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Новини</a>
+          <a class="nav-link" href="news-list.html">Новини</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Контакти</a>
+          <a class="nav-link" href="contacts.html">Контакти</a>
         </li>
       </ul>
     </div>
@@ -123,11 +123,11 @@
     <div class="container">
       <nav class="d-flex align-items-center justify-content-between" aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Головна</a></li>
-          <li class="breadcrumb-item"><a href="#">Вакансії</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Головна</a></li>
+          <li class="breadcrumb-item"><a href="vacancy-list.html">Вакансії</a></li>
           <li class="breadcrumb-item active" aria-current="page">Cлюсарі та зварщики</li>
         </ol>
-        <a class="back-link" href="#"><span class="icon-arrow"></span> Повернутись назад</a>
+        <a class="back-link" href="vacancy-list.html"><span class="icon-arrow"></span> Повернутись назад</a>
       </nav>
     </div>
   </section>
@@ -159,9 +159,6 @@
                   <li>UAH ≈ 118 грн./год.</li>
                   <li>PLN = 15 zł /год.</li>
                 </ul>
-              </div>
-              <div class="add-info link">
-                <a class="btn btn-empty" href="#">Переглянути</a>
               </div>
             </div>
             <div class="timer">
@@ -285,7 +282,7 @@
   </section>
   <section class="hot-vacancy">
     <div class="container">
-      <p class="section-header">Інші вакансії</p>
+      <p class="section-header">Гарячі вакансії <a href="vacancy-list.html">дивитись всі</a></p>
       <div class="row">
         <div class="col">
           <div class="hot-vacancy-item vacancy-item" id="timer0">
@@ -314,7 +311,7 @@
                 </ul>
               </div>
               <div class="add-info link">
-                <a class="btn btn-empty" href="#">Переглянути</a>
+                <a class="btn btn-empty" href="vacancy-item.html">Переглянути</a>
               </div>
             </div>
             <div class="timer">
@@ -355,7 +352,7 @@
                 </ul>
               </div>
               <div class="add-info link">
-                <a class="btn btn-empty" href="#">Переглянути</a>
+                <a class="btn btn-empty" href="vacancy-item.html">Переглянути</a>
               </div>
             </div>
             <div class="timer">
@@ -370,13 +367,22 @@
           </div>
         </div>
         <div class="col">
-          <div class="hot-vacancy-item vacancy-item disabled" id="timer2">
+          <div class="hot-vacancy-item vacancy-item" id="timer2">
             <div class="hot-vacancy-img vacancy-img">
               <img src="images/hot-vacancy-item-2.jpg" alt="#">
             </div>
             <div class="overlay">
               <p class="h4 job-name">Слюсарі та зварщики</p>
-              <p class="working-places">Тимчасово недоступно</p>
+              <p class="working-places">Залишилось робочих місць: <span>4</span></p>
+              <div class="timer">
+                <p>До кінця набору залишилось:</p>
+                <ul>
+                  <li class="days-counter"><span class="days"></span><span class="text">дн</span></li>
+                  <li class="hours-counter"><span class="hours"></span><span class="text">год</span></li>
+                  <li class="minutes-counter"><span class="minutes"></span><span class="text">хв</span></li>
+                  <li class="seconds-counter"><span class="seconds"></span><span class="text">сек</span></li>
+                </ul>
+              </div>
               <p class="add-info sex">Стать: <span>чоловіки, жінки, сімейні пари</span></p>
               <p class="add-info age">Вік: <span>18-45</span></p>
               <p class="add-info experience">Досвід роботи: <span>без досвіду</span></p>
@@ -387,8 +393,17 @@
                 </ul>
               </div>
               <div class="add-info link">
-                <a class="btn btn-empty" href="#">Переглянути</a>
+                <a class="btn btn-empty" href="vacancy-item.html">Переглянути</a>
               </div>
+            </div>
+            <div class="timer">
+              <p>До кінця набору залишилось:</p>
+              <ul>
+                <li class="days-counter"><span class="days"></span><span class="text">дн</span></li>
+                <li class="hours-counter"><span class="hours"></span><span class="text">год</span></li>
+                <li class="minutes-counter"><span class="minutes"></span><span class="text">хв</span></li>
+                <li class="seconds-counter"><span class="seconds"></span><span class="text">сек</span></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -429,13 +444,13 @@
           <a href="#" class="footer-logo">
             <img src="images/footer-logo.png" alt="#">
           </a>
-          <a href="#" class="copyrights">Ліцензія: Certyfikat od 2016-04-22 №13-921</a>
+          <a href="index.html" class="copyrights">Ліцензія: Certyfikat od 2016-04-22 №13-921</a>
         </div>
         <div class="col">
           <ul class="footer-nav">
-            <li><a href="#">Вакансії</a></li>
-            <li><a href="#">Відгуки</a></li>
-            <li><a href="#">Контакти</a></li>
+            <li><a href="vacancy-list.html">Вакансії</a></li>
+            <li><a href="review-page.html">Відгуки</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
             <li><a href="#">Карта сайту</a></li>
           </ul>
         </div>

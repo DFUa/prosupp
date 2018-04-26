@@ -44,9 +44,9 @@ $(document).ready(function() {
     prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
   });
   $('.about-us-slider').slick({
-  	autoplay: true,
-  	rows: 0,
-  	nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
+    autoplay: true,
+    rows: 0,
+    nextArrow: '<button type="button" class="slick-next icon-arrow"></button>',
     prevArrow: '<button type="button" class="slick-prev icon-arrow"></button>',
   })
 
@@ -66,12 +66,27 @@ $(document).ready(function() {
 
   $('.contact-item-add-info-btn .nav-link').on('click', function(e) {
     e.preventDefault();
-    /* tabs-content id provides by aria-control in the html file */
     let aria = $(this).attr('aria-control-by'),
       sectionPosition = $('.contact-get-to').offset().top;
     $('#' + aria + ' a[href="' + $(this).attr('href') + '"]').tab('show');
     $('html, body').animate({
       scrollTop: sectionPosition - 50
     }, 1000);
-  })
+  });
+
+  //animation
+  function checkIfInView(element) {
+    let elem = $(element),
+      elemTopPos = elem.offset().top,
+      elemBottomPos = elemTopPos + elem.outerHeight();
+    $(window).on('scroll resize', function() {
+      let windowBotPos = ($(window).scrollTop() + $(window).height());
+      if (elemBottomPos >= $(window).scrollTop() && (elemTopPos <= windowBotPos)) {
+        elem.addClass('scrolled');
+      }
+    })
+  }
+
+  checkIfInView('.how-work')
+  $(window).trigger('scroll');
 })

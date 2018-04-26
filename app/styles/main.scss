@@ -869,6 +869,8 @@ header {
       font-size: 1.125em;
       max-width: 100px;
       position: relative;
+      opacity: 0;
+      transition: all 1s;
       span {
         display: block;
         width: 100px;
@@ -898,6 +900,25 @@ header {
       }
       &:before {
         display: none;
+      }
+    }
+  }
+  &.scrolled{
+    ul{
+      li{
+        opacity: 1;
+        &:nth-child(2){
+          transition-delay: .75s;
+        }
+        &:nth-child(3){
+          transition-delay: 1.5s;
+        }
+        &:nth-child(4){
+          transition-delay: 2.25s;
+        }
+        &:nth-child(5){
+          transition-delay: 3s;
+        }
       }
     }
   }
@@ -1131,6 +1152,9 @@ footer {
   .vacancy-item-page-text {
     ul {
       padding: 0;
+    }
+    &.disabled{
+      color: $grey;
     }
   }
 }
